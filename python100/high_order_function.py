@@ -45,7 +45,12 @@ students = [
 
 numbers = [1,2,3,4,5,6,7,8,9]
 
-filter_result = filter(lambda x : x < 4, numbers)
-filter_result1 = filter(lambda x : x > 4, numbers)
+# filter_result = filter(lambda x : x < 4, numbers)
+# filter_result1 = filter(lambda x : x > 4, numbers)
 # print(list(filter_result))
-print(list(filter_result1))
+# print(list(filter_result1))
+
+fruits = ["apple", "banana", "cherry", "date", "fig", "grape"]
+
+filter_result = filter(lambda fruit : "e" in fruit, fruits)
+print(list(filter_result))

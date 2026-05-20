@@ -77,7 +77,12 @@ import functools
 # reduce_result = functools.reduce(lambda x,y : x+y, numbers)
 # print(reduce_result)
 
-numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+# numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 
 reduce_result = functools.reduce(lambda x,y : x if x > y else y, numbers)
-print(reduce_result)
+# print(reduce_result)
+
+numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+# new_list = [x * 2 for x in numbers]
+# print(new_list)

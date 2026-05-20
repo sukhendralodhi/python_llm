@@ -43,3 +43,40 @@ def factorial(n):
     
 # result = factorial(5)
 # print(result)
+
+# palindrome = "madam"
+
+def is_palindrome(s):
+
+    reverse = ""
+
+    for i in s:
+        reverse = i + reverse
+
+    if s == reverse:
+        return True
+    else:
+        return False
+    
+
+# print(is_palindrome("madam"))
+
+# if is_palindrome("hello"):
+#     print("The string is a palindrome")
+# else:    
+#     print("The string is not a palindrome")
+
+
+# using recursion
+
+def palindrome(s):
+    if len(s) <= 1:
+        return True
+    else:
+        return s[0] == s[-1] and palindrome(s[1:-1])
+    
+# print(palindrome("madam"))
+
+
+
+

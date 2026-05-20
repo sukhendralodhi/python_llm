@@ -52,5 +52,32 @@ numbers = [1,2,3,4,5,6,7,8,9]
 
 fruits = ["apple", "banana", "cherry", "date", "fig", "grape"]
 
-filter_result = filter(lambda fruit : "e" in fruit, fruits)
-print(list(filter_result))
+# filter_result = filter(lambda fruit : "e" in fruit, fruits)
+# print(list(filter_result))
+
+
+# =====================================================================================================================
+
+# Differences between map and filter functions:
+
+# 1. map function applies a given function to each item of an iterable and returns a list of the results, while filter function applies a given function to each item of an iterable and returns a list of the items for which the function returns true.
+# 2. map function can be used to transform the items of an iterable, while filter function can be used to select a subset of the items of an iterable.
+# 3. map function can be used to perform operations on the items of an iterable, while filter function can be used to perform operations on the items of an iterable and return a subset of the items.
+# 4. map function can be used to create a new list of the same length as the original list, while filter function can be used to create a new list that is shorter than the original list.
+
+
+
+#======================================================================================================================
+
+# REDUCE FUNCTION => a function that takes a function and an iterable as arguments and returns a single value that is the result of applying the function to the items of the iterable.
+
+
+import functools
+# numbers = [1,2,3,4,5]
+# reduce_result = functools.reduce(lambda x,y : x+y, numbers)
+# print(reduce_result)
+
+numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+
+reduce_result = functools.reduce(lambda x,y : x if x > y else y, numbers)
+print(reduce_result)

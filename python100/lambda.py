@@ -31,7 +31,7 @@ print(result(11))
 
 # ------------------------------------------------------------------------
 
-# higher order function => a function that takes another function as an argument or returns a function as a result.
+
 
 
 

@@ -99,3 +99,8 @@ class Atm:
 
 
 atm = Atm()
+atm.create_pin()
+atm.deposit()
+atm.withdraw()
+atm.check_balance()
+atm.exit()

@@ -9,3 +9,13 @@
 # Generality to Specificity
 # In OOP, we can create a general class that defines common properties and behaviors, and then create specific classes that inherit from the general class. This allows us to reuse code and avoid duplication.
 
+# What is object literal?
+# Object literal is a way to create an object in Python using curly braces {}. It allows us to define properties and values directly within the object. For example:
+
+
+list = [1, 2, 3, 4, 5]
+number = 10
+
+
+# What is function vs method?
+# A function is a block of code that performs a specific task and can be called independently. A method, on the other hand, is a function that is associated with an object and can only be called on that object. Methods are defined within a class and can access the properties of the object they belong to.

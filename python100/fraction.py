@@ -30,6 +30,18 @@ class Fraction:
         new_denom = self.denom * other.denom
         return "{}/{}".format(new_num, new_denom) 
     
+    def __sub__(self, other):
+        new_num = self.num * other.denom - self.denom * other.num
+        new_denom = self.denom * other.denom
+        return "{}/{}".format(new_num, new_denom)
+    
+    def __mul__(self, other):
+        new_num = self.num * other.num
+        new_denom = self.denom * other.denom
+        return "{}/{}".format(new_num, new_denom)
+    
+    
+    
 
 x = Fraction(1, 2)
 y = Fraction(1, 3)

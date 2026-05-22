@@ -23,8 +23,16 @@ class Fraction:
         self.denom = denominator
 
     def __str__(self):
-        return f"{self.num}/{self.denom}"   
+        return "{}/{}".format(self.num, self.denom)
+
+    def __add__(self, other):
+        new_num = self.num * other.denom + self.denom * other.num
+        new_denom = self.denom * other.denom
+        return "{}/{}".format(new_num, new_denom) 
     
 
 x = Fraction(1, 2)
+y = Fraction(1, 3)
 print(x)
+print(y)
+print(x + y)

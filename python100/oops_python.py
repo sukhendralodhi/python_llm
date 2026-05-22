@@ -29,6 +29,13 @@ class Atm:
 
         self.__menu()
 
+    def get_pin(self):
+        return self.__pin
+    
+    def set_pin(self, new_pin):
+        self.__pin = new_pin 
+        print("Pin updated successfully")
+
     def __menu(self):
 
         user_input = input("""

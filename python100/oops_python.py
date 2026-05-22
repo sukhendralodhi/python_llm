@@ -24,12 +24,12 @@ class Atm:
 
     def __init__(self):
 
-        self.balance = 0
-        self.pin = ""
+        self.__balance = 0
+        self.__pin = ""
 
-        self.menu()
+        self.__menu()
 
-    def menu(self):
+    def __menu(self):
 
         user_input = input("""
         Hello, how would you like to proceed?
@@ -53,46 +53,46 @@ class Atm:
             self.exit()
         else:
             print("Invalid input")
-            self.menu()
+            self.__menu()
 
     def create_pin(self):
         new_pin = input("Enter new pin:")
-        self.pin = new_pin
+        self.__pin = new_pin
         print("Pin created successfully")
 
     def deposit(self):
 
         entered_pin = input("Enter your pin:")
 
-        if entered_pin != self.pin:
+        if entered_pin != self.__pin:
             print("Incorrect pin")
-            self.menu()
+            self.__menu()
         else:
             amount = int(input("Enter amount to deposit:"))
-            self.balance += amount
-            print(f"Deposit successful. Your new balance is {self.balance}")
+            self.__balance += amount
+            print(f"Deposit successful. Your new balance is {self.__balance}")
 
     def withdraw(self):
         entered_pin = input("Enter your pin:")
-        if entered_pin != self.pin:
+        if entered_pin != self.__pin:
             print("Incorrect pin")
-            self.menu()
+            self.__menu()
         else:
             amount = int(input("Enter amount to withdraw:"))
-            if amount > self.balance:
+            if amount > self.__balance:
                 print("Insufficient balance")
             else:
-                self.balance -= amount
-                print(f"Withdrawal successful. Your new balance is {self.balance}")
+                self.__balance -= amount
+                print(f"Withdrawal successful. Your new balance is {self.__balance}")
 
     def check_balance(self):
         entered_pin = input("Enter your pin:")
 
-        if entered_pin != self.pin:
+        if entered_pin != self.__pin:
             print("Incorrect pin")
-            self.menu()
+            self.__menu()
         else:
-            print(f"Your balance is {self.balance}")
+            print(f"Your balance is {self.__balance}")
 
     def exit(self):
         print("Thank you for using our ATM. Goodbye!")

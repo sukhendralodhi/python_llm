@@ -40,11 +40,17 @@ class Fraction:
         new_denom = self.denom * other.denom
         return "{}/{}".format(new_num, new_denom)
     
-    
+    def __truediv__(self, other):
+        new_num = self.num * other.denom
+        new_denom = self.denom * other.num
+        return "{}/{}".format(new_num, new_denom)
     
 
 x = Fraction(1, 2)
 y = Fraction(1, 3)
-print(x)
-print(y)
-print(x + y)
+# print(x)
+# print(y)
+print("x + y = {}".format(x + y))
+print("x - y = {}".format(x - y))
+print("x * y = {}".format(x * y))
+print("x / y = {}".format(x / y))

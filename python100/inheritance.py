@@ -64,3 +64,48 @@ class Student(User):
 # user.register()
 # user.enroll()
 # user.review()
+
+
+# class Phone:
+
+#     def __init__(self, price, brand, camera):
+#         print("inside phone constructor")
+#         self.price = price
+#         self.brand = brand
+#         self.camera = camera
+
+
+# class Smartphone(Phone):
+#     pass
+
+
+# s = Smartphone(80000, "Apple", 14)
+# print(s.brand)
+# print(s.price)
+# print(s.camera)
+
+
+# Note: Agar class B class A se inherit kr rha hai or class B ke andar koi constructor ni hai to jab ap class B ka object banoge to class A ka consturctor call ho jaega 
+
+# if child class inheriting parent class and child class do not have constructor or be create a object for child class then parent class consturctor would be called 
+
+
+# INHERITING PRIVATE MEMBER FROM PARENT CLASS
+
+class Phone:
+
+    def __init__(self, price, brand, camera):
+        print("inside phone constructor")
+        self.price = price
+        self.__brand = brand # private attribute. (__variable name)
+        self.camera = camera
+
+
+class Smartphone(Phone):
+    pass
+
+
+s = Smartphone(80000, "Apple", 14)
+print(s.__brand) # child class can not access parent class private methods and attributes 
+print(s.price)
+print(s.camera)
